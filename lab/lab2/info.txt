@@ -1,0 +1,59 @@
+
+Specificaton
+
+Prefix: mn
+A tree represents the menu structure.
+The tree has nodes: struct mn_type { next, prev, ptr_to_element (ptr to me) }
+Operation on the tree
+- save to file
+- load from file
+- convert to c code
+- convert to element hierarchy for immediate execution by u8glib
+- convert to gtk tree object
+- delete subtree
+- add element (node)
+- copy subtree
+- cut subtree
+- paste subtree
+- history (copy full tree to history buffer)
+
+Prefix: me (menu element)
+
+struct me
+{
+  callback procedure
+  element name
+  comment string
+  option string
+  int int_arg_1;  
+  int int_arg_2;  
+}
+
+
+Idea:
+Use http://www.enlightenment.org/
+
+ubuntu: package "e17-dev", "libelementary-dev", "libelementary-bin", "libelementary-data"
+
+http://trac.enlightenment.org/e/wiki/Elementary
+http://docs.enlightenment.org/stable/elementary/
+
+/usr/share/doc/enlightenment/html/documentation.html
+/usr/include/elementary-0/Elementary.h
+
+gcc hello.c -o hello `pkg-config elementary --cflags --libs`
+/usr/bin/elementary_quicklaunch
+/usr/bin/elementary_run
+
+1.1.2013
+ToDo
+- mr needs list of format strings
+  --> DONE
+
+2.1.2013
+ToDo
+- GetFmtStr must not return "NULL", instead always return "" 
+  -->  Reason is that this is also used for the RTE, whcih interprets "NULL"
+  --> DONE
+  
+  
