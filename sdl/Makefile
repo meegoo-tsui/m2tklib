@@ -46,7 +46,7 @@ LIBSRC += m2elu8base.c m2elu8num.c m2elu8hs.c
 LIBSRC += m2ellabel.c m2elstr.c m2eltext.c m2elu32.c m2elinfo.c
 LIBSRC += m2elsetval.c m2eltoggle.c m2elradio.c m2elsubutl.c
 LIBSRC += m2draw.c m2elstrup.c m2gfxutl.c m2rom.c m2utlu8d.c
-LIBSRC += m2utlstrdat.c m2ellabelfn.c
+LIBSRC += m2utlstrdat.c m2ellabelfn.c m2dfs.c
 
 EXTRASRC = m2ghsdl.c m2sdl.c  
 
@@ -62,5 +62,5 @@ m2sdl: $(OBJ)
 
 
 clean:
-	-rm $(OBJ) m2sdl
+	-rm -f $(OBJ) m2sdl
 	
